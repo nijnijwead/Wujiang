@@ -776,6 +776,11 @@ html[data-lang="zh"] .wordmark-subtitle {
     font-size: 20px;
   }
 
+  .wordmark-subtitle,
+  .wordmark-separator {
+    display: none;
+  }
+
   .topnav {
     gap: 20px;
     font-size: 11px;
