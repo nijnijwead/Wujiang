@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Photovoice placeholder 10</title>
+  <desc id="desc">A graphic placeholder illustration for a participant photograph in the Photovoice collage.</desc>
+  <defs>
+    <filter id="grain" x="-10%" y="-10%" width="120%" height="120%">
+  <feTurbulence type="fractalNoise" baseFrequency=".78" numOctaves="3" stitchTiles="stitch"/>
+  <feColorMatrix type="saturate" values="0"/>
+  <feComponentTransfer><feFuncA type="table" tableValues="0 .22"/></feComponentTransfer>
+</filter>
+    <linearGradient id="light" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d7caae" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#242b23" stop-opacity=".2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="#d7caae"/>
+  
+          <rect width="1200" height="900" fill="#d7caae"/>
+          <rect width="1200" height="900" fill="#242b23" opacity=".06"/>
+          <path d="M730 0h90v900h-90Z" fill="#5e7460" opacity=".64"/>
+          <path d="M730 155h90M730 315h90M730 475h90M730 635h90" stroke="#242b23" stroke-width="7" opacity=".35"/>
+          <path d="M0 738h1200" stroke="#242b23" stroke-width="10" opacity=".35"/>
+          <path d="M775 690c-20-120 50-230 130-275M780 555c-110-65-155-4-218 16m240 95c91-95 156-87 224-35m-120-100c27-55 83-77 134-79" fill="none" stroke="#242b23" stroke-width="17" stroke-linecap="round" opacity=".58"/>
+          <g fill="#ae4934" opacity=".7">
+            <ellipse cx="690" cy="520" rx="65" ry="32" transform="rotate(-24 690 520)"/><ellipse cx="883" cy="440" rx="58" ry="28" transform="rotate(16 883 440)"/><ellipse cx="807" cy="330" rx="70" ry="33" transform="rotate(-14 807 330)"/><ellipse cx="1020" cy="462" rx="54" ry="25" transform="rotate(-28 1020 462)"/>
+          </g>
+        
+  <rect width="1200" height="900" fill="url(#light)"/>
+  <rect width="1200" height="900" filter="url(#grain)" opacity=".22"/>
+  <rect x="28" y="28" width="1144" height="844" fill="none" stroke="#242b23" stroke-width="1" opacity=".15"/>
+</svg>

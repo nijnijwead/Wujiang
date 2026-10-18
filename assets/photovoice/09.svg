@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Photovoice placeholder 09</title>
+  <desc id="desc">A graphic placeholder illustration for a participant photograph in the Photovoice collage.</desc>
+  <defs>
+    <filter id="grain" x="-10%" y="-10%" width="120%" height="120%">
+  <feTurbulence type="fractalNoise" baseFrequency=".78" numOctaves="3" stitchTiles="stitch"/>
+  <feColorMatrix type="saturate" values="0"/>
+  <feComponentTransfer><feFuncA type="table" tableValues="0 .22"/></feComponentTransfer>
+</filter>
+    <linearGradient id="light" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c5b9a8" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#222725" stop-opacity=".2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="#c5b9a8"/>
+  
+          <rect width="1200" height="900" fill="#222725" opacity=".8"/>
+          <rect x="150" y="105" width="900" height="690" fill="#c5b9a8" opacity=".12"/>
+          <path d="M150 105h900v690H150Z" fill="none" stroke="#c5b9a8" stroke-width="44" opacity=".78"/>
+          <path d="M600 105v690M150 450h900" stroke="#c5b9a8" stroke-width="28" opacity=".78"/>
+          <g fill="#c5b9a8" opacity=".24">
+            <rect x="250" y="245" width="120" height="410"/><rect x="420" y="170" width="90" height="485"/><rect x="720" y="290" width="145" height="365"/><rect x="915" y="210" width="76" height="445"/>
+          </g>
+          <g fill="#d1a14e" opacity=".82">
+            <rect x="274" y="280" width="12" height="30"/><rect x="310" y="330" width="12" height="30"/><rect x="447" y="210" width="12" height="30"/><rect x="748" y="325" width="12" height="30"/><rect x="938" y="250" width="12" height="30"/>
+          </g>
+        
+  <rect width="1200" height="900" fill="url(#light)"/>
+  <rect width="1200" height="900" filter="url(#grain)" opacity=".22"/>
+  <rect x="28" y="28" width="1144" height="844" fill="none" stroke="#222725" stroke-width="1" opacity=".15"/>
+</svg>

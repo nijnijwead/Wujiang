@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Photovoice placeholder 20</title>
+  <desc id="desc">A graphic placeholder illustration for a participant photograph in the Photovoice collage.</desc>
+  <defs>
+    <filter id="grain" x="-10%" y="-10%" width="120%" height="120%">
+  <feTurbulence type="fractalNoise" baseFrequency=".78" numOctaves="3" stitchTiles="stitch"/>
+  <feColorMatrix type="saturate" values="0"/>
+  <feComponentTransfer><feFuncA type="table" tableValues="0 .22"/></feComponentTransfer>
+</filter>
+    <linearGradient id="light" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ded0b6" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#292d28" stop-opacity=".2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="#ded0b6"/>
+  <g transform="translate(1200 0) scale(-1 1)">
+          <rect width="1200" height="900" fill="#3b666a" opacity=".16"/>
+          <circle cx="600" cy="450" r="295" fill="#ded0b6" stroke="#292d28" stroke-width="15"/>
+          <circle cx="600" cy="450" r="231" fill="#3b666a" opacity=".24" stroke="#292d28" stroke-width="7"/>
+          <path d="M444 308l55 112m95 67 73 93m78-227-58 101m-98 79-67 105" stroke="#a9442d" stroke-width="12" stroke-linecap="round"/>
+          <g fill="#292d28">
+            <rect x="480" y="400" width="34" height="7" transform="rotate(25 480 400)"/>
+            <rect x="588" y="516" width="34" height="7" transform="rotate(50 588 516)"/>
+            <rect x="677" y="388" width="34" height="7" transform="rotate(-34 677 388)"/>
+            <rect x="553" y="614" width="34" height="7" transform="rotate(-47 553 614)"/>
+          </g>
+          <rect width="1200" height="900" filter="url(#grain)" opacity=".16"/>
+        </g>
+  <rect width="1200" height="900" fill="url(#light)"/>
+  <rect width="1200" height="900" filter="url(#grain)" opacity=".22"/>
+  <rect x="28" y="28" width="1144" height="844" fill="none" stroke="#292d28" stroke-width="1" opacity=".15"/>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Photovoice placeholder 15</title>
+  <desc id="desc">A graphic placeholder illustration for a participant photograph in the Photovoice collage.</desc>
+  <defs>
+    <filter id="grain" x="-10%" y="-10%" width="120%" height="120%">
+  <feTurbulence type="fractalNoise" baseFrequency=".78" numOctaves="3" stitchTiles="stitch"/>
+  <feColorMatrix type="saturate" values="0"/>
+  <feComponentTransfer><feFuncA type="table" tableValues="0 .22"/></feComponentTransfer>
+</filter>
+    <linearGradient id="light" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b8b5a9" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#222725" stop-opacity=".2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="#b8b5a9"/>
+  <g transform="translate(1200 0) scale(-1 1)">
+          <rect width="1200" height="900" fill="#435b5a" opacity=".15"/>
+          <circle cx="600" cy="445" r="255" fill="#b8b5a9" opacity=".88"/>
+          <circle cx="600" cy="445" r="218" fill="none" stroke="#222725" stroke-width="9"/>
+          <g stroke="#222725" stroke-width="6" stroke-linecap="round">
+            <path d="M600 445V290"/><path d="M600 445l-104 65"/>
+          </g>
+          <circle cx="600" cy="445" r="15" fill="#d5a644"/>
+          <g fill="#222725">
+            <rect x="592" y="243" width="16" height="34"/><rect x="592" y="613" width="16" height="34"/>
+            <rect x="398" y="437" width="34" height="16"/><rect x="768" y="437" width="34" height="16"/>
+          </g>
+          <path d="M260 760h680" stroke="#d5a644" stroke-width="14" opacity=".7"/>
+        </g>
+  <rect width="1200" height="900" fill="url(#light)"/>
+  <rect width="1200" height="900" filter="url(#grain)" opacity=".22"/>
+  <rect x="28" y="28" width="1144" height="844" fill="none" stroke="#222725" stroke-width="1" opacity=".15"/>
+</svg>
