@@ -25,12 +25,16 @@ def parse_captions(path: Path) -> dict[str, str]:
 
 
 def main() -> None:
-    manifest: dict[str, dict[str, str]] = {}
+    manifest: dict[str, dict[str, dict[str, str]]] = {"zh": {}, "en": {}}
     for index in range(1, 9):
         key = f"{index:02d}"
-        candidates = (WALL / key / f"{key}captions.txt", WALL / key / f"{key}.txt")
-        source = next((path for path in candidates if path.exists()), None)
-        manifest[key] = parse_captions(source) if source else {}
+        for code, suffix in (("zh", ""), ("en", ".en")):
+            candidates = (
+                WALL / key / f"{key}captions{suffix}.txt",
+                WALL / key / f"{key}{suffix}.txt",
+            )
+            source = next((path for path in candidates if path.exists()), None)
+            manifest[code][key] = parse_captions(source) if source else {}
 
     output = WALL / "captions.js"
     body = json.dumps(manifest, indent=2, ensure_ascii=False)
@@ -39,7 +43,12 @@ def main() -> None:
         f"window.WUJIANG_CAPTIONS = {body};\n",
         encoding="utf-8",
     )
-    print(f"Wrote {output.relative_to(ROOT)} with {sum(len(v) for v in manifest.values())} captions.")
+    zh_count = sum(len(values) for values in manifest["zh"].values())
+    en_count = sum(len(values) for values in manifest["en"].values())
+    print(
+        f"Wrote {output.relative_to(ROOT)} with {zh_count} Chinese and "
+        f"{en_count} English captions."
+    )
 
 
 if __name__ == "__main__":

@@ -29,7 +29,37 @@
     </button>
   </header>
 
-  <main class="home" id="portrait-index" data-home>
+  <section class="about-page" id="about" data-about data-home aria-labelledby="about-title">
+    <div class="about-body" data-about-body aria-label="About this project" data-aria-en="About this project" data-aria-zh="关于本项目">
+      <article class="about-copy">
+        <h1 class="about-headline" id="about-title" data-en="Wujiang: The Places We Hold Dear" data-zh="乌江镇：我们珍爱的地方">Wujiang: The Places We Hold Dear</h1>
+        <div class="about-text">
+          <p data-en="This project documents everyday life in Wujiang, one of the tens of thousands of county towns in China, through participant photography, documentary photography, and ethnographic fieldwork. It aims at bringing together different ways of seeing the same place: what its young residents choose to record, what I notice through my own camera, and what emerges through conversations and time spent together." data-zh="本项目通过参与式摄影、纪实摄影与田野调查，记录中国成千上万座县城之一——乌江镇的日常生活。它试图把观看同一片地方的不同方式汇聚在一起：当地年轻人选择记录下的内容，我透过自己的镜头留意到的细节，以及在交谈与相处中慢慢浮现的东西。">This project documents everyday life in Wujiang, one of the tens of thousands of county towns in China, through participant photography, documentary photography, and ethnographic fieldwork. It aims at bringing together different ways of seeing the same place: what its young residents choose to record, what I notice through my own camera, and what emerges through conversations and time spent together.</p>
+        </div>
+        <h2 class="about-subhead" data-en="What Makes Us Happy?" data-zh="什么让我们快乐？">What Makes Us Happy?</h2>
+        <div class="about-text">
+          <p data-en="In this section, I invited several local young people to use cameras to document things that made them happy. Rather than directing them toward particular places or subjects, I gave them one simple instruction: record the things that make you happy." data-zh="在这一部分，我邀请了几位当地年轻人用相机记录让他们感到快乐的事物。我没有指定具体的地点或拍摄对象，只给了他们一个简单的提示：拍下让你快乐的东西。">In this section, I invited several local young people to use cameras to document things that made them happy. Rather than directing them toward particular places or subjects, I gave them one simple instruction: record the things that make you happy.</p>
+          <p data-en="Their choices became a way into their everyday lives—into the places they frequent, the things they value, and the moments they consider worth preserving. These photographs are not illustrations of my observations, nor do they offer a complete account of each photographer's life. They are personal perspectives, shaped by what each person chose to notice and share. Presented alongside their words and my field notes, they create a space for different interpretations of Wujiang to coexist." data-zh="他们的选择成了走进他们日常生活的入口——走进他们常去的地方、看重的事物，以及他们觉得值得留住的瞬间。这些照片既不是对我观察的图解，也无法完整讲述每位拍摄者的生活。它们是个人化的视角，由每个人选择留意和分享的东西塑造而成。当它们与拍摄者的话和我的田野笔记并置时，便为关于乌江镇的不同理解留出了共存的空间。">Their choices became a way into their everyday lives&mdash;into the places they frequent, the things they value, and the moments they consider worth preserving. These photographs are not illustrations of my observations, nor do they offer a complete account of each photographer's life. They are personal perspectives, shaped by what each person chose to notice and share. Presented alongside their words and my field notes, they create a space for different interpretations of Wujiang to coexist.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="about-dialog" data-about-dialog role="dialog" aria-modal="true" aria-labelledby="about-dialog-title" aria-hidden="true" inert>
+    <header class="detail-topbar">
+      <button class="detail-back" type="button" data-about-close>
+        <span aria-hidden="true">←</span>
+        <span data-en="Index" data-zh="索引">Index</span>
+      </button>
+      <p class="detail-title" id="about-dialog-title" data-en="About" data-zh="关于">About</p>
+      <p class="detail-number" data-en="Wujiang" data-zh="乌江镇">Wujiang</p>
+    </header>
+    <div class="about-dialog-body" data-about-body tabindex="0" aria-label="About this project" data-aria-en="About this project" data-aria-zh="关于本项目">
+      <article class="about-copy" data-about-dialog-copy></article>
+    </div>
+  </section>
+
+  <main class="home" id="portrait-index" data-home data-rail-root="portrait">
     <div class="portrait-rail" data-rail tabindex="0" aria-label="Eight portraits. Scroll horizontally to browse." data-aria-en="Eight portraits. Scroll horizontally to browse." data-aria-zh="八幅肖像。横向滚动浏览。">
       <div class="portrait-track">
         <button class="portrait-card" type="button" data-portrait="1" data-src="assets/portraits/01.jpg?v=2" data-name-en="JA" data-name-zh="JA" aria-label="Open portrait 01, JA">
@@ -70,32 +100,66 @@
     <footer class="rail-footer" aria-label="Portrait navigation" data-aria-en="Portrait navigation" data-aria-zh="肖像导航">
       <p class="rail-count"><span data-current>01</span>—08</p>
       <div class="rail-progress" aria-hidden="true"><span data-progress></span></div>
-      <div class="rail-controls">
-        <button type="button" data-prev aria-label="Previous portrait" data-aria-en="Previous portrait" data-aria-zh="上一幅肖像">←</button>
-        <button type="button" data-next aria-label="Next portrait" data-aria-en="Next portrait" data-aria-zh="下一幅肖像">→</button>
-      </div>
     </footer>
+
+    <div class="rail-arrows">
+      <button type="button" class="rail-arrow rail-arrow--prev" data-prev aria-label="Previous portrait" data-aria-en="Previous portrait" data-aria-zh="上一幅肖像">←</button>
+      <button type="button" class="rail-arrow rail-arrow--next" data-next aria-label="Next portrait" data-aria-en="Next portrait" data-aria-zh="下一幅肖像">→</button>
+    </div>
   </main>
 
-  <section class="about-page" id="about" data-about role="dialog" aria-modal="true" aria-labelledby="about-title" aria-hidden="true" inert>
-    <header class="detail-topbar">
-      <button class="detail-back" type="button" data-about-close>
-        <span aria-hidden="true">←</span>
-        <span data-en="Index" data-zh="索引">Index</span>
-      </button>
-      <p class="detail-title" id="about-title" data-en="About" data-zh="关于">About</p>
-      <p class="detail-number" data-en="Wujiang" data-zh="乌江镇">Wujiang</p>
-    </header>
-    <div class="about-body" data-about-body tabindex="0" aria-label="About this project" data-aria-en="About this project" data-aria-zh="关于本项目">
-      <article class="about-copy">
-        <h1 class="about-headline">What Makes Us Happy?</h1>
-        <div class="about-text">
-          <p>This website documents everyday life in Wujiang, a small town in China, through photography, ethnographic fieldwork, and the perspectives of the young people who live there.</p>
-          <p>I began by photographing the town's landscapes, commercial spaces, gathering places, and residents. Over time, I became interested in how the town was changing and how people inhabited it: where they gathered, what they valued, and what an outsider might overlook.</p>
-          <p>Alongside my own photographs, I invited local young people to use cameras to document things in their own lenses. I had given them the only prompt of: &ldquo;Document what makes you happy.&rdquo; Their photographs, together with field notes and conversations, offer perspectives that neither my camera nor my observations could provide alone.</p>
-          <p>This website brings these different forms of documentation into conversation. My photographs record what I noticed; the participants&rsquo; images reflect what they chose to notice; my field notes trace how my understanding developed and changed.</p>
-        </div>
-      </article>
+  <section class="about-continuation" id="what-remains" data-home aria-labelledby="what-remains-title">
+    <article class="about-copy">
+      <h2 class="about-subhead about-subhead--first" id="what-remains-title" data-en="What Remains?" data-zh="还剩下什么？">What Remains?</h2>
+      <div class="about-text">
+        <p data-en="From an outsider's perspective, my own photographs explore the relationship between people and the environments they inhabit. I photograph landscapes, buildings, interiors, portraits of local residents, and smaller details of everyday life. From an aesthetic perspective, the county town brings me infinite nostalgia and a sense of childhood fever dreams." data-zh="作为一个外来者，我的照片试图探讨人与所处环境之间的关系。我拍摄风景、建筑、室内空间、当地居民的面孔，以及日常生活里那些更细小的片段。从审美的角度来说，这座县城带给我无尽的乡愁，还有一种恍如童年梦境的迷离感。">From an outsider's perspective, my own photographs explore the relationship between people and the environments they inhabit. I photograph landscapes, buildings, interiors, portraits of local residents, and smaller details of everyday life. From an aesthetic perspective, the county town brings me infinite nostalgia and a sense of childhood fever dreams.</p>
+        <p data-en="I am drawn to spaces that bear traces of previous activity, gathering places that remain in use, and the contrasts between physical surroundings and the lives unfolding within them. Rather than presenting Wujiang as simply declining or thriving, I hope to document its contradictions and complexities, leaving room for the place to exceed my own expectations." data-zh="我被那些留有旧日活动痕迹的空间、仍在使用中的聚会场所，以及物质环境与其中展开的生活之间的反差所吸引。我不想把乌江镇简单地呈现为正在衰落或正在兴旺，而是希望记录下它的矛盾与复杂，让这个地方保留超出我想象的可能。">I am drawn to spaces that bear traces of previous activity, gathering places that remain in use, and the contrasts between physical surroundings and the lives unfolding within them. Rather than presenting Wujiang as simply declining or thriving, I hope to document its contradictions and complexities, leaving room for the place to exceed my own expectations.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="home scenery-home" id="scenery" data-home data-rail-root="scenery" aria-label="Scenery photographs" data-aria-en="Scenery photographs" data-aria-zh="风景照片">
+    <div class="portrait-rail" data-rail tabindex="0" aria-label="Seven photographs. Scroll horizontally to browse." data-aria-en="Seven photographs. Scroll horizontally to browse." data-aria-zh="七幅照片。横向滚动浏览。">
+      <div class="portrait-track">
+        <button class="portrait-card scenery-card" type="button" data-scenery="1" data-src="assets/scenery/01.jpeg" data-name-en="The Ethereal Nights" data-name-zh="新月" aria-label="Open scenery 01, The Ethereal Nights">
+          <img src="assets/scenery/01.jpeg" alt="Dark field with a lit building in the distance" data-alt-en="Dark field with a lit building in the distance" data-alt-zh="远处亮着灯的建筑，前方是昏暗的田野" loading="lazy" decoding="async" draggable="false">
+          <span class="portrait-name" aria-hidden="true"><span class="portrait-name-primary">The Ethereal Nights</span></span>
+        </button>
+        <button class="portrait-card scenery-card" type="button" data-scenery="2" data-src="assets/scenery/02.jpeg" data-name-en="The Villagers" data-name-zh="生灵" aria-label="Open scenery 02, The Villagers">
+          <img src="assets/scenery/02.jpeg" alt="Figures crossing an open lot at dusk" data-alt-en="Figures crossing an open lot at dusk" data-alt-zh="黄昏时穿过空地的身影" loading="lazy" decoding="async" draggable="false">
+          <span class="portrait-name" aria-hidden="true"><span class="portrait-name-primary">The Villagers</span></span>
+        </button>
+        <button class="portrait-card scenery-card" type="button" data-scenery="3" data-src="assets/scenery/03.jpeg" data-name-en="The Forgotten" data-name-zh="亡魂" aria-label="Open scenery 03, The Forgotten">
+          <img src="assets/scenery/03.jpeg" alt="Moonlit courtyard with an old car" data-alt-en="Moonlit courtyard with an old car" data-alt-zh="月光下的院子，停着一辆旧车" loading="lazy" decoding="async" draggable="false">
+          <span class="portrait-name" aria-hidden="true"><span class="portrait-name-primary">The Forgotten</span></span>
+        </button>
+        <button class="portrait-card scenery-card" type="button" data-scenery="4" data-src="assets/scenery/04.jpeg" data-name-en="The Interior" data-name-zh="内脏" aria-label="Open scenery 04, The Interior">
+          <img src="assets/scenery/04.jpeg" alt="Cluttered shop interior with household goods" data-alt-en="Cluttered shop interior with household goods" data-alt-zh="堆满日用品的杂货店内景" loading="lazy" decoding="async" draggable="false">
+          <span class="portrait-name" aria-hidden="true"><span class="portrait-name-primary">The Interior</span></span>
+        </button>
+        <button class="portrait-card scenery-card" type="button" data-scenery="5" data-src="assets/scenery/05.jpeg" data-name-en="The Lucid Days" data-name-zh="烈日" aria-label="Open scenery 05, The Lucid Days">
+          <img src="assets/scenery/05.jpeg" alt="Roadside trees against a blue sky" data-alt-en="Roadside trees against a blue sky" data-alt-zh="蓝天下路旁的树" loading="lazy" decoding="async" draggable="false">
+          <span class="portrait-name" aria-hidden="true"><span class="portrait-name-primary">The Lucid Days</span></span>
+        </button>
+        <button class="portrait-card scenery-card" type="button" data-scenery="6" data-src="assets/scenery/06.jpeg" data-name-en="The Alive" data-name-zh="苟活" aria-label="Open scenery 06, The Alive">
+          <img src="assets/scenery/06.jpeg" alt="Brick house with a tiled facade" data-alt-en="Brick house with a tiled facade" data-alt-zh="贴着瓷砖立面的砖房" loading="lazy" decoding="async" draggable="false">
+          <span class="portrait-name" aria-hidden="true"><span class="portrait-name-primary">The Alive</span></span>
+        </button>
+        <button class="portrait-card scenery-card" type="button" data-scenery="7" data-src="assets/scenery/07.jpeg" data-name-en="The Reflections" data-name-zh="存在" aria-label="Open scenery 07, The Reflections">
+          <img src="assets/scenery/07.jpeg" alt="Round convex traffic mirror on a weathered wall" data-alt-en="Round convex traffic mirror on a weathered wall" data-alt-zh="斑驳墙面上的圆形凸面交通镜" loading="lazy" decoding="async" draggable="false">
+          <span class="portrait-name" aria-hidden="true"><span class="portrait-name-primary">The Reflections</span></span>
+        </button>
+      </div>
+    </div>
+
+    <footer class="rail-footer" aria-label="Scenery navigation" data-aria-en="Scenery navigation" data-aria-zh="风景导航">
+      <p class="rail-count"><span data-current>01</span>—07</p>
+      <div class="rail-progress" aria-hidden="true"><span data-progress></span></div>
+    </footer>
+
+    <div class="rail-arrows">
+      <button type="button" class="rail-arrow rail-arrow--prev" data-prev aria-label="Previous photograph" data-aria-en="Previous photograph" data-aria-zh="上一幅照片">←</button>
+      <button type="button" class="rail-arrow rail-arrow--next" data-next aria-label="Next photograph" data-aria-en="Next photograph" data-aria-zh="下一幅照片">→</button>
     </div>
   </section>
 
@@ -106,7 +170,7 @@
         <span data-en="Index" data-zh="索引">Index</span>
       </button>
       <p class="detail-title" id="detail-title" data-detail-title>JA</p>
-      <p class="detail-number"><span data-detail-number>01</span> / 08</p>
+      <p class="detail-number"><span data-detail-number>01</span> / <span class="detail-total" data-detail-total>08</span></p>
     </header>
 
     <div class="detail-layout">
@@ -128,9 +192,11 @@
     </div>
   </section>
 
-  <script src="assets/portraits/stories.js"></script>
+  <script src="assets/portraits/stories.js?v=3"></script>
   <script src="assets/wall/manifest.js"></script>
-  <script src="assets/wall/captions.js"></script>
-  <script src="assets/main.js"></script>
+  <script src="assets/wall/captions.js?v=2"></script>
+  <script src="assets/wall02/manifest.js?v=3"></script>
+  <script src="assets/scenery/stories.js?v=3"></script>
+  <script src="assets/main.js?v=8"></script>
 </body>
 </html>

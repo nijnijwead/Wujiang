@@ -9,12 +9,13 @@ PORTRAITS = ROOT / "assets" / "portraits"
 
 
 def main() -> None:
-    stories: dict[str, str] = {}
+    stories: dict[str, dict[str, str]] = {"zh": {}, "en": {}}
     for index in range(1, 9):
         key = f"{index:02d}"
-        path = PORTRAITS / f"{key}.txt"
-        text = path.read_text(encoding="utf-8").replace("\r\n", "\n") if path.exists() else ""
-        stories[key] = text.strip()
+        for code, suffix in (("zh", ".txt"), ("en", ".en.txt")):
+            path = PORTRAITS / f"{key}{suffix}"
+            text = path.read_text(encoding="utf-8").replace("\r\n", "\n") if path.exists() else ""
+            stories[code][key] = text.strip()
 
     output = PORTRAITS / "stories.js"
     body = json.dumps(stories, indent=2, ensure_ascii=False)
@@ -23,8 +24,12 @@ def main() -> None:
         f"window.WUJIANG_STORIES = {body};\n",
         encoding="utf-8",
     )
-    filled = sum(1 for value in stories.values() if value)
-    print(f"Wrote {output.relative_to(ROOT)} with {filled} populated portrait texts.")
+    zh_filled = sum(1 for value in stories["zh"].values() if value)
+    en_filled = sum(1 for value in stories["en"].values() if value)
+    print(
+        f"Wrote {output.relative_to(ROOT)} with {zh_filled} Chinese and "
+        f"{en_filled} English portrait texts."
+    )
 
 
 if __name__ == "__main__":
