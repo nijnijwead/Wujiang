@@ -10,7 +10,7 @@ PORTRAITS = ROOT / "assets" / "portraits"
 
 def main() -> None:
     stories: dict[str, dict[str, str]] = {"zh": {}, "en": {}}
-    for index in range(1, 9):
+    for index in range(1, 8):
         key = f"{index:02d}"
         for code, suffix in (("zh", ".txt"), ("en", ".en.txt")):
             path = PORTRAITS / f"{key}{suffix}"

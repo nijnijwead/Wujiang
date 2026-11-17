@@ -2,6 +2,8 @@
 """Write assets/wall/manifest.js from the per-portrait photo folders."""
 
 import json
+import hashlib
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -9,17 +11,33 @@ WALL = ROOT / "assets" / "wall"
 EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".avif"}
 
 
+def photo_sort_key(path: Path) -> tuple[int, int, str]:
+    match = re.match(r"^(\d+)", path.stem)
+    if match:
+        return (0, int(match.group(1)), path.name.lower())
+    return (1, 0, path.name.lower())
+
+
+def versioned_path(path: Path) -> str:
+    digest = hashlib.sha256(path.read_bytes()).hexdigest()[:10]
+    relative = path.relative_to(ROOT).as_posix()
+    return f"{relative}?v={digest}"
+
+
 def main() -> None:
     manifest: dict[str, list[str]] = {}
-    for index in range(1, 9):
+    for index in range(1, 8):
         key = f"{index:02d}"
         folder = WALL / key
         folder.mkdir(parents=True, exist_ok=True)
         files = sorted(
-            path for path in folder.iterdir()
-            if path.is_file() and path.suffix.lower() in EXTENSIONS
+            (
+                path for path in folder.iterdir()
+                if path.is_file() and path.suffix.lower() in EXTENSIONS
+            ),
+            key=photo_sort_key,
         )
-        manifest[key] = [path.relative_to(ROOT).as_posix() for path in files]
+        manifest[key] = [versioned_path(path) for path in files]
 
     output = WALL / "manifest.js"
     body = json.dumps(manifest, indent=2, ensure_ascii=False)

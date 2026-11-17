@@ -53,6 +53,7 @@
   const pad = (value) => String(value).padStart(2, '0');
   const nextFrame = () => new Promise((resolve) => requestAnimationFrame(resolve));
   const portraitName = (card) => (language === 'zh' ? (card.dataset.nameZh || '') : (card.dataset.nameEn || ''));
+  const portraitWall = (card, index) => photoSets[card?.dataset.wall || pad(index)] || [];
   const portraitAlt = (card) => {
     const number = pad(card.dataset.portrait);
     const name = portraitName(card);
@@ -375,13 +376,11 @@
         }
       });
 
-      rail.addEventListener('wheel', (event) => {
-        if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
-        const rootTop = root.getBoundingClientRect().top;
-        if (rootTop < -2 || rootTop > 2) return;
-        event.preventDefault();
-        rail.scrollLeft += event.deltaY;
-      }, { passive: false });
+      /* A vertical wheel over a pinned rail must scroll the page. Taking it
+         over to move the rail sideways made the portrait section a dead end:
+         the rail fills the screen, so every upward or downward gesture was
+         swallowed and the page could not be left at all. The rail still moves
+         by horizontal trackpad gesture (natively), drag, or the arrow keys. */
     }
 
     return { rail, cards, realCards };
@@ -808,7 +807,7 @@
       startStoryTimer();
     } else {
       buildStory(itemIndex);
-      buildGallery(itemIndex, photoSets[pad(itemIndex)] || [], window.WUJIANG_CAPTIONS);
+      buildGallery(itemIndex, portraitWall(card, itemIndex), window.WUJIANG_CAPTIONS);
       startStoryTimer();
     }
     closeButton?.focus({ preventScroll: true });
@@ -973,7 +972,7 @@
       if (detail.classList.contains('is-open') && detail.dataset.detailMode === 'portrait') {
         const portraitIndex = Number(activeCard.dataset.portrait);
         buildStory(portraitIndex);
-        buildGallery(portraitIndex, photoSets[pad(portraitIndex)] || [], window.WUJIANG_CAPTIONS);
+        buildGallery(portraitIndex, portraitWall(activeCard, portraitIndex), window.WUJIANG_CAPTIONS);
       }
     }
 

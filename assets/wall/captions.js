@@ -18,16 +18,27 @@ window.WUJIANG_CAPTIONS = {
       "11": "“本来想拍后面这个爱心的对，因为这个后面那个树是一个爱心。”"
     },
     "03": {
+      "02": "这里是高家冲吗（镇子最近的地铁站，离镇子15公里左右，50分钟到南京）？\n“对的，哥几个进城里了。”",
+      "03": "“WRS太淫荡了”",
+      "04": "这是你女朋友吗？\n“放屁，这就是我同桌。”\n你是不是喜欢人家？\n“我操你别乱讲啊”",
+      "07": "“你知道的。”",
+      "10": "为什么拍这张？\n“不想上学了。”"
+    },
+    "04": {
+      "01": "为什么上课拍？\n“其实是要下课了所以开心。”",
+      "04": "“男神。”",
+      "07": "这是高家冲吗？\n“对的我们当时路过这里。”",
+      "11": "“我们马上运动会了我妈给我换了新鞋子。”",
+      "17": "“笼中鸟，何时飞？”\n（这是一个互联网梗，是一则搞笑的meme的配文）"
+    },
+    "05": {
       "01": "“好不容易有个晴天，我怕又下雨了。”",
       "03": "“本来他在抠鼻子的，我拍的太慢了。”",
       "06": "这是你们家吗？\n“不知道是谁家。好像是lyc家吧，我们都把钓鱼的东西放他那儿。”",
       "09": "“怎么像个猩猩哈哈哈”"
     },
-    "04": {},
-    "05": {},
     "06": {},
-    "07": {},
-    "08": {}
+    "07": {}
   },
   "en": {
     "01": {
@@ -47,15 +58,26 @@ window.WUJIANG_CAPTIONS = {
       "11": "\"I originally wanted to get that heart in the background—yeah, because the tree behind it is shaped like a heart.\""
     },
     "03": {
+      "02": "Is this Gaojiachong? (It's the subway station nearest town—about 15 kilometers away, and 50 minutes to Nanjing.)\n\"Yep, the guys and I are heading into the city.\"",
+      "03": "\"WRS is way too filthy.\"",
+      "04": "Is that your girlfriend?\n\"Bullshit—that's just my deskmate.\"\nDo you like her?\n\"Fuck, don't go making things up.\"",
+      "07": "\"You know.\"\n(The hand signs form the numbers 9 and 1. \"91\" is the name of an adult website in China.)",
+      "10": "Why this photo?\n\"I was so done with school.\""
+    },
+    "04": {
+      "01": "Why were you taking pictures in class?\n\"Honestly, class was about to end, so I was happy.\"",
+      "04": "\"My crush.\"",
+      "07": "Is this Gaojiachong?\n\"Yeah, we were passing by.\"",
+      "11": "\"Our sports day is coming up, so my mom got me a new pair of shoes.\"",
+      "17": "\"Bird in a cage, when will you fly?\"\n(This is an internet meme—it's the caption from a funny meme.)"
+    },
+    "05": {
       "01": "\"We finally got a sunny day. I was afraid it would rain again.\"",
       "03": "\"He was picking his nose at first, but I was too slow to take the picture.\"",
       "06": "Is this your house?\n\"I don't know whose house it is. I think it's lyc's. We all leave our fishing gear at his place.\"",
       "09": "\"Why does he look like a gorilla? Hahaha.\""
     },
-    "04": {},
-    "05": {},
     "06": {},
-    "07": {},
-    "08": {}
+    "07": {}
   }
 };

@@ -1,12 +1,12 @@
 @charset "utf-8";
 
 @font-face {
-  font-family: "DengXian Light";
-  src: local("DengXian Light"), local("等线 Light"),
-    url("fonts/DengXian-Light.ttf") format("truetype");
+  font-family: "DengXian Latin";
+  src: url("fonts/DengXian-Light-Latin.woff") format("woff");
   font-style: normal;
   font-weight: 300;
   font-display: swap;
+  unicode-range: U+0000-024F, U+2000-206F, U+20A0-20CF, U+2100-214F;
 }
 
 :root {
@@ -19,8 +19,9 @@
   --footer-h: 46px;
   --pad: clamp(16px, 2.2vw, 32px);
   --gap: clamp(10px, 1.2vw, 18px);
-  --sans: "DengXian Light", "DengXian", -apple-system, BlinkMacSystemFont,
-    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  --sans: "DengXian Latin", "DengXian Light", "等线 Light", "DengXian",
+    -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", Arial, sans-serif;
   --serif: var(--sans);
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --story-fade: 2200ms;

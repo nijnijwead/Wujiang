@@ -26,11 +26,12 @@ def parse_captions(path: Path) -> dict[str, str]:
 
 def main() -> None:
     manifest: dict[str, dict[str, dict[str, str]]] = {"zh": {}, "en": {}}
-    for index in range(1, 9):
+    for index in range(1, 8):
         key = f"{index:02d}"
         for code, suffix in (("zh", ""), ("en", ".en")):
             candidates = (
                 WALL / key / f"{key}captions{suffix}.txt",
+                WALL / key / f"{key}caption{suffix}.txt",
                 WALL / key / f"{key}{suffix}.txt",
             )
             source = next((path for path in candidates if path.exists()), None)
